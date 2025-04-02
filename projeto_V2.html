@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minimercado Online - Compre produtos alimentícios, de higiene e limpeza com facilidade.">
+    <title>Empório do Bosque</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .navbar-brand img { width: 50px; }
+        .carousel-item img { max-height: 400px; object-fit: cover; }
+        footer { background-color: #133d39; color: white; padding: 20px 0; }
+        .navbar-custom {
+            background-color: #133d39; /* Escolha a cor desejada */
+        }
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .nav-link {
+            color: white; /* Ajuste a cor do texto para contraste */
+        }
+        .classform-control {
+            margin-bottom: 10px; /* Espaçamento entre os campos do formulário */
+            width: 300px;       /* Largura do campo de entrada */
+        }
+        .class_botao_cadastro {
+            background-color: #29837a; /* Cor do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove a borda padrão */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 10px 20px; /* Espaçamento interno do botão */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        }
+        .class_botao_cadastro:hover {
+            background-color: #868c0b; /* Cor do botão ao passar o mouse */
+        }
+        .card-group .card {
+            margin: 10px; /* Espaçamento entre os cards */
+            max-width: 300px; /* Largura máxima dos cards */
+            flex: 1; /* Permite que os cards se ajustem ao espaço disponível */
+        }
+        .card-group .card img {
+            max-height: 200px; /* Altura máxima para as imagens */
+            object-fit: contain; /* Ajusta a imagem para caber no espaço sem cortar */
+            width: 100%; /* Garante que a largura ocupe todo o espaço do card */
+        }
+        .card-group .card-body {
+            text-align: center; /* Centraliza o texto */
+        }
+        .card-group {
+            justify-content: center; /* Centraliza os cards no grupo */
+            gap: 15px; /* Espaçamento entre os cards */
+        }
+        .footer .text-center {
+            display: flex; /* Ativa o layout flexbox */
+            flex-direction: column; /* Empilha os itens verticalmente */
+            align-items: center; /* Centraliza os itens horizontalmente */
+            gap: 15px; /* Espaçamento entre os elementos */
+        }
+        .footer .redes a {
+            margin: 0 10px; /* Espaçamento horizontal entre os ícones */
+        }
+        .footer .redes img {
+            width: 30px; /* Tamanho uniforme para os ícones */
+            height: 30px;
+        }
+        .footer .location {
+            display: flex; /* Alinha o ícone e o texto lado a lado */
+            align-items: center;
+            gap: 10px; /* Espaçamento entre o ícone e o texto */
+        }
+        .footer .whatsapp-icon {
+            width: 30px; /* Tamanho uniforme para o ícone do WhatsApp */
+            height: 30px;
+        }
+        /* Modo noturno */
+        body.dark-mode {
+            background-color: #121212; /* Fundo escuro */
+            color: #ffffff; /* Texto claro */
+        }
+        body.dark-mode a {
+            color: #1e90ff; /* Links com contraste */
+        }
+        body.dark-mode .footer {
+            background-color: #1c1c1c; /* Fundo do footer no modo noturno */
+        }
+    </style>
+</head>
+<body>
+    <!---------------- Header ----------------------->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo"> Empório do Bosque</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!---------------- Carrossel ----------------------->
+    <section id="inicio" class="container my-4">
+            <h2>Bem-vindo ao Empório do Bosque!</h2>
+            <p>Aqui você encontra uma grande variedade de produtos alimentícios, de higiene e limpeza. 
+              Faça suas compras com facilidade e comodidade, sem sair de casa!</p>
+            <P>Trabalhamos somente com produtos orgânicos e veganos, pensando sempre em qualidade de vida e sua saúde.</P>
+            <p>No empório do Bosque você tem a sua disposição produtos com bom preço e alta qualidade.
+              Somos um mercado voltado a marcas ecológicas que utilizam, sempre que possível,
+              matéria-prima orgânica, natural ou biodegradável. 
+              Priorizamos insumos de altíssima qualidade e procuramos por marcas que possuem processo produtivo 
+              guiado por três principais valores: a qualidade dos produtos, 
+              a segurança de quem utiliza e o respeito ao meio ambiente. 
+              Se tiver algum produto em especial que esteja procurando, entre em contato abaixo e ficaremos feliz em ajudá-lo.</p>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/banner1.gif" class="d-block w-100" alt="Promoção de Frutas">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/banner.jpg" class="d-block w-100" alt="Bem-vindo ao Empório do Bosque">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+ <!--------------------------Produtos----------------------------->  
+ 
+ <section id="produtos" class="container my-5">
+    <h2>Produtos</h2>
+    <h3>Frutas e Verduras</h3>
+    <div class="card-group">
+        <div class="card">
+          <img src="imagens/Ameixa.jpg" class="card-img-top" alt="Ameixa">
+          <div class="card-body">
+            <h5 class="card-title">Ameixa importada- R$ 14,99/kg</h5>
+            <p class="card-text">A ameixa fresca importada é uma fruta deliciosa e suculenta que traz inúmeros benefícios para a saúde. Com sua polpa macia e sabor adocicado, ela é uma excelente opção para quem busca uma alimentação saudável e equilibrada..</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagens/Beterraba.jpg" class="card-img-top" alt="Beterraba">
+          <div class="card-body">
+            <h5 class="card-title">Beterraba - R$ 3,00/unidade</h5>
+            <p class="card-text">TA beterraba é um alimento incrivelmente nutritivo e cheio de benefícios para a saúde. Com sua cor vibrante e sabor adocicado, a beterraba é uma excelente fonte de vitaminas e minerais essenciais para o bom funcionamento do nosso organismo.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+      </div><br>
+    <br>
+    <h3>Produtos Alimentícios Não Perecíveis</h3>
+    <div class="card-group">
+        <div class="card">
+          <img src="imagens/Arroz.jpg" class="card-img-top" alt="Arroz">
+          <div class="card-body">
+            <h5 class="card-title">Arroz - R$ 16,60/1kg</h5>
+            <p class="card-text"><p>Umbuy Orgânicos Arroz Polido Orgânico Umbuy 1Kg Arroz</p>
+            <p>Sobre esse item:</p>
+            <ul>
+                <li>Produto orgânico</li>
+                <li>Sem uso de agrotóxicos, adubos químicos e transgênico</li>
+                <li>Certificado por auditoria. Selo Brasil SISORG. Instituto Certifica 257423.</li>
+            </ul></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagens/Azeite.jpg" class="card-img-top" alt="Azeite Orgânico">
+          <div class="card-body">
+            <h5 class="card-title">Azeite - R$ 78,90</h5>
+            <p class="card-text"><p>Azeite de Oliva Extra Virgem Orgânico</p>
+            <p>Sobre esse item:</p>
+            <ul>
+                <li>Produto orgânico</li>
+                <li>Extra virgem extraido a frio</li>
+            </ul>
+        </ul></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+  
+      </div><br> 
+    <br>
+    <h3>Produtos de Higiene e Limpeza</h3>
+    <div class="card-group">
+        <div class="card">
+          <img src="imagens/Desinfetante.jpg" class="card-img-top" alt="Desinfetante Sustentável">
+          <div class="card-body">
+            <h5 class="card-title">Desinfetante - R$ 53,50/unidade</h5>
+            <p class="card-text"></p><p>Biowash Bw Concentrado Multiuso Sensitve 1L</p>
+                <p>O produto contém uma embalagem econômica,é Biodegradável, vegano, base vegetal.
+                Ele também possui o Certificado ibd de ingredientes naturais.</p>
+            </ul></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="imagens/Amaciante.jpg" class="card-img-top" alt="Amaciante Orgânico">
+          <div class="card-body">
+            <h5 class="card-title">Amaciante - R$ 9,98/unidade</h5>
+            <p class="card-text"><p>Vinagreen Amaciante De Roupas Algodao 2 L.</p>
+            <p>
+                O Amaciante de roupas Vinagreen é  produzido com Álcool extraneutro orgânico,
+                que não prejudia o solo, nem água, beneficiando o meio ambiente.
+                Possui um perfume duradouro e elimina resíduos de sabão.
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+ 
+ </section>
+
+
+ <!---------------- Formulário de Cadastro ----------------------->
+<section id="cadastro" class="container my-5">
+    <div class="mb-3">
+    <h2>Cadastro de Cliente</h2>
+    <form action="https://formsubmit.co/thalitagpes@gmail.com" method="POST">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome" class="form-label">Nome Completo</label>
+            <input type="text" name="nome" placeholder="Digite o nome" class="form-control" id="nome" required autofocus>
+            <br>
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" name="cpf" placeholder="000.000.000-00" pattern="[0-9]{11}" class="form-control" required>
+            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+            <input type="text" name="dataNascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" class="form-control" id="nascimento" required>
+            <br>
+            <label for="estado_civil" class="form-label">Estado Civil</label>
+            <select name="estado_civil" class="form-select" id="estado_civil">
+                <option value="" disabled selected>Selecione o estado civil</option>
+                <option value="Solteiro">Solteiro(a)</a></option>
+                <option value="Casado">Casado(a)</option>
+                <option value="Divorciado">Divorciado(a)</option>
+                <option value="Viúvo">Viúvo(a)</option>
+                <option value="União Estável">União Estável</option>
+            </select>
+            <legend>Gênero</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="feminino" name="genero" value="Feminino">
+                <label class="form-check-label" for="feminino">Feminino</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="masculino" name="genero" value="Masculino">
+                <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+            <br>
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" placeholder="Digite o e-mail" class="form-control" id="email" required>
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" name="fone" placeholder="(DDD)XXXXXXXX" pattern="[0-9]{11}" id="telefone" required>
+        </fieldset><br>
+        <fieldset>
+            <legend>Localização</legend>
+            <label for="endereco" class="form-label">Endereço</label>
+            <input type="text" name="endereco" class="form-control" id="endereco" required>
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" name="bairro" class="form-control" id="bairro" required>
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" name="cep" class="form-control" id="cep" required>
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade" class="form-control" id="cidade" required>       
+            <label for="estado" class="form-label">Estado</label>
+            <select name="estado" class="form-select" id="estado" required>
+                <option value="" disabled selected>Selecione o estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>   
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </fieldset>
+        <div class="mb-3">
+          <label for="servico" class="form-label">Escolha o Serviço</label>
+          <select class="form-select" id="servico" required>
+              <option value="Retirada no local">Retirada no local</option>
+              <option value="Tele-entrega">Tele-entrega</option>
+          </select>
+          <label for="agendamento" class="form-label">Agendamento</label>
+                <input type="datetime-local" name="agendamento" class="form-control" id="agendamento" required>     
+      </div>
+      <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha" required>
+      </div>
+      <div class="mb-3">
+          <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
+          <input type="password" class="form-control" id="confirmarSenha" required>
+      </div>
+        <br>
+        <center>
+        <button type="submit" class="class_botao_cadastro">Cadastrar</button>
+        </center>       
+        
+    </form>
+    </div>
+
+    <script>
+        document.getElementById("cpf").addEventListener("input", function(e) {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 3) value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            if (value.length > 6) value = value.replace(/(\d{3})(\d)/, "$1.$2");
+            if (value.length > 9) value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+            e.target.value = value;
+        });
+
+        document.getElementById("dataNascimento").addEventListener("input", function(e) {
+            let value = e.target.value.replace(/\D/g, "");
+            if (value.length > 2) value = value.replace(/(\d{2})(\d)/, "$1/$2");
+            if (value.length > 5) value = value.replace(/(\d{2})(\d)/, "$1/$2");
+            e.target.value = value;
+        });
+
+        document.getElementById("cadastroForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let senha = document.getElementById("senha").value;
+            let confirmarSenha = document.getElementById("confirmarSenha").value;
+            if (senha !== confirmarSenha) {
+                alert("As senhas não coincidem!");
+                return;
+            }
+            alert("Cadastro realizado com sucesso!");
+        });
+    </script>
+ <!---------------- Serviço ----------------------->
+ <section id="servicos" class="container my-6"></section>
+        <div class="mb-3">
+            <fieldset>
+                <legend>Serviço</legend>
+                <ul>
+                  <li>Retirada no Local - Gratuito</li>
+                  <li>Tele-entrega - R$ 10,00 (disponível para a região urbana)</li>
+                </ul>
+                <!-- <label>Escolha o serviço</label>
+                <div >
+                    <select name="sevico" class="form-select" id="servico" required>
+                        <option value="" disabled selected>Selecione o serviço</option>
+                        <option value="Entrega">Entrega</option>
+                        <option value="Retirada">Retirada</option>
+               
+                </div> -->
+            </fieldset>
+        </div>  
+ </section>
+    <!---------------- Rodapé ----------------------->
+    <section id="contato">
+    <footer class="footer">
+        <div class="text-center">
+            <h3>Contato</h3>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <p>Endereço: Rua das Flores, 123, Bairro Jardim, Cidade XYZ</p>
+            </div>
+            <div class="redes">
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                    <img src="https://images.tcdn.com.br/files/1276210/themes/104/img/icone-instagram-footer.png?c5ca7c758cf1c9bc658bcd2a00c15e01" alt="Ícone do Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                    <img src="https://images.tcdn.com.br/files/1276210/themes/104/img/icone-facebook-footer.png?c5ca7c758cf1c9bc658bcd2a00c15e01" alt="Ícone do Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                    <img src="https://images.tcdn.com.br/files/1276210/themes/104/img/icone-youtube-footer.png?c5ca7c758cf1c9bc658bcd2a00c15e01" alt="Ícone do YouTube">
+                </a>
+            </div>
+            <p>Contato: <a href="mailto:emporiobosque@gmail.com">emporiobosque@gmail.com</a> | Telefone: (XX) XXXX-XXXX</p>
+            <div>
+                <img src="https://images.tcdn.com.br/files/1276210/themes/104/img/icone-whatsapp-footer.png?c5ca7c758cf1c9bc658bcd2a00c15e01" alt="Ícone do WhatsApp" class="whatsapp-icon">
+                <a href="https://wa.me/55DDXXXXXXXXX" target="_blank" class="whatsapp" aria-label="WhatsApp de contato">(DD) XXXXX-XXXX</a>
+            </div>
+            <p>Horário de Funcionamento: Segunda a Sexta, das 8h às 18h | Sábado, das 8h às 12h</p>
+        </div>
+    </footer>
+    <div class="copyright text-center">
+        <p>&copy; 2025 Empório do Bosque. Todos os direitos reservados.</p>
+        <p>Desenvolvido por [Seu Nome]</p>
+    </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Alternar modo noturno
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <button onclick="toggleDarkMode()" aria-label="Alternar modo noturno">Modo Noturno</button>
+</body>
+</html>
