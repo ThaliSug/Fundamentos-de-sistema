@@ -6,9 +6,10 @@
     <meta name="description" content="Minimercado Online - Compre produtos alimentícios, de higiene e limpeza com facilidade.">
     <title>Empório do Bosque</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .navbar-brand img { width: 50px; }
-        .carousel-item img { max-height: 400px; object-fit: cover; }
+        .carousel-item img { max-height: 400px; object-fit: cover; width: 100%; }
         footer { background-color: #133d39; color: white; padding: 20px 0; }
         .navbar-custom {
             background-color: #133d39; /* Escolha a cor desejada */
@@ -80,7 +81,17 @@
             color: #1e90ff; /* Links com contraste */
         }
         body.dark-mode .footer {
-            background-color: #1c1c1c; /* Fundo do footer no modo noturno */
+            background-color: #133d39; /* Tom mais verde, igual ao header */
+        }
+        /* Fonte arredondada para o container do início */
+        #inicio {
+            font-family: 'Poppins', sans-serif; /* Fonte arredondada e bonita */
+        }
+
+        /* Fonte estilizada para os h3 dos produtos */
+        #produtos h3 {
+            font-family: 'Playfair Display', serif; /* Fonte estilizada */
+            font-weight: bold;
         }
     </style>
 </head>
@@ -235,9 +246,9 @@
             <input type="text" name="nome" placeholder="Digite o nome" class="form-control" id="nome" required autofocus>
             <br>
             <label for="cpf" class="form-label">CPF</label>
-            <input type="text" name="cpf" placeholder="000.000.000-00" pattern="[0-9]{11}" class="form-control" required>
+            <input type="text" name="cpf" placeholder="000.000.000-00" pattern="[0-9]{11}" class="form-control" id="cpf" required>
             <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-            <input type="text" name="dataNascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" class="form-control" id="nascimento" required>
+            <input type="text" name="dataNascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" class="form-control" id="dataNascimento" required>
             <br>
             <label for="estado_civil" class="form-label">Estado Civil</label>
             <select name="estado_civil" class="form-select" id="estado_civil">
@@ -346,7 +357,7 @@
             e.target.value = value;
         });
 
-        document.getElementById("cadastroForm").addEventListener("submit", function(e) {
+        document.getElementById("cadastro").addEventListener("submit", function(e) {
             e.preventDefault();
             let senha = document.getElementById("senha").value;
             let confirmarSenha = document.getElementById("confirmarSenha").value;
@@ -409,7 +420,7 @@
     </footer>
     <div class="copyright text-center">
         <p>&copy; 2025 Empório do Bosque. Todos os direitos reservados.</p>
-        <p>Desenvolvido por [Seu Nome]</p>
+        <p>Desenvolvido por Thalita Suguikawa</p>
     </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -421,4 +432,5 @@
     </script>
     <button onclick="toggleDarkMode()" aria-label="Alternar modo noturno">Modo Noturno</button>
 </body>
+
 </html>
